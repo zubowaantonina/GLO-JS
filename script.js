@@ -14,11 +14,9 @@ let rollback = 10; //Откат посреднику %
 
 adaptive = adaptive.toLowerCase();
 adaptive === "да" ? (adaptive = true) : (adaptive = false);
-
 const showTypeOf = function (variable) {
   console.log(variable, typeof variable);
 };
-
 const getRollBackMessage = (price) => {
   if (price >= 30000) {
     return "Даем скидку в 10%";
@@ -30,7 +28,6 @@ const getRollBackMessage = (price) => {
     return "Что то пошло не так";
   }
 };
-
 // 1) Объявить функцию getAllServicePrices. Функция возвращает сумму всех дополнительных услуг.
 //  Результат сохраняем в переменную allServicePrices. Тип - function expression
 const getAllServicePrices = function (servicePrice1, servicePrice2) {
@@ -56,7 +53,7 @@ title = getTitle();
 // 4) Объявить функцию getServicePercentPrices. Функция возвращает итоговую стоимость за вычетом процента отката.
 //  Результат сохраняем в переменную servicePercentPrice (итоговая стоимость минус сумма отката)
 const getServicePercentPrices = (fullPrice) => {
-  return Math.ceil(fullPrice - (fullPrice * rollback) / 100);
+  return fullPrice - (fullPrice * rollback) / 100;
 };
 const servicePercentPrice = getServicePercentPrices(fullPrice);
 
@@ -67,5 +64,5 @@ showTypeOf(adaptive);
 console.log(screens);
 console.log(fullPrice);
 console.log(allServicePrices);
-console.log(servicePercentPrice, "откат");
+console.log(servicePercentPrice, "итоговая стоимость");
 console.log(getRollBackMessage(fullPrice));
