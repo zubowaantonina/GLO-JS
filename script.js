@@ -11,7 +11,9 @@ let allServicePrices;
 let fullPrice;
 //проверка на число
 const isNumber = function (num) {
-  return !isNaN(parseFloat(num)) && isFinite(num);
+  // return /^\d+$/.test(num)&&num!==0;
+  // return /^-?\d+(\.\d+)?$/.test(num);
+  return !isNaN(parseFloat(num)) && isFinite(num)&&num!==0;
 };
 const asking = function () {
   title = prompt("Как называется ваш проект?", "калькулятор верстки");
@@ -60,7 +62,7 @@ const getAllServicePrices = function () {
         n = +prompt("Сколько это будет стоить?");
       } while (!isNumber(n));
       return +n;
-    }
+    };
     sum += numberChecks();
   }
   return sum;
