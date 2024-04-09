@@ -81,6 +81,7 @@ const appData = {
   logger: () => {
     console.log(appData.fullPrice);
     console.log(appData.servicePercentPrice);
+  
   },
 };
 
