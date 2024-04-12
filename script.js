@@ -23,6 +23,7 @@ books[5].children[1].children[10].before(books[5].children[1].children[8])
 books[5].children[1].children[9].before(books[5].children[1].children[5])
 books[5].children[1].children[1].after(books[5].children[1].children[7])
 books[5].children[1].children[6].after(books[5].children[1].children[3])
+books[5].children[1].children[6].after(books[5].children[1].children[5])
 // в шестой книге добавить главу “Глава 8: За пределами ES6” и поставить её в правильное место
 const newElement=document.createElement('li');
 newElement.textContent = 'Глава 8: За пределами ES6';
