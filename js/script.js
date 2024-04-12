@@ -1,24 +1,29 @@
 "use strict";
-const h1=document.getElementsByTagName('h1')
-console.log(h1[0]);
-const handlerBtn=document.getElementsByClassName('handler_btn')
-console.log(handlerBtn);
-const screenBtn=document.querySelector('.screen-btn');
-console.log(screenBtn);
-const otherItems1=document.querySelectorAll('.other-items.percent');
-console.log(otherItems1);
-const otherItems2=document.querySelectorAll('.other-items.number');
-console.log(otherItems2);
-const rollbackInput=document.querySelector('.rollback input');
-console.log(rollbackInput);
-const rollbackSpan=document.querySelector('.rollback span');
-console.log(rollbackSpan);
-const totalInput=document.getElementsByClassName('total-input')
+const h1 = document.getElementsByTagName('h1')
+const handlerBtn = document.getElementsByClassName('handler_btn');
+const screenBtn = document.querySelector('.screen-btn');
+const otherItems1 = document.querySelectorAll('.other-items.percent');
+const otherItems2 = document.querySelectorAll('.other-items.number');
+const rollbackInput = document.querySelector('.rollback input');
+const rollbackSpan = document.querySelector('.rollback span');
+const totalInput = document.getElementsByClassName('total-input')
+
+let screen=document.querySelectorAll('.screen');
+
 Array.from(totalInput).forEach((el) => {
     console.log(el);
 });
-let screen=document.querySelectorAll('.screen');
+
+console.log(h1[0]);
+console.log(handlerBtn[0]);
+console.log(handlerBtn[1]);
+console.log(screenBtn);
+console.log(otherItems1);
+console.log(otherItems2);
+console.log(rollbackInput);
+console.log(rollbackSpan);
 console.log(screen);
+
 
 
 // const appData = {
