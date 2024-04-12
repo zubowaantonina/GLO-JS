@@ -8,15 +8,17 @@ const rollbackInput = document.querySelector('.rollback input');
 const rollbackSpan = document.querySelector('.rollback span');
 const totalInput = document.getElementsByClassName('total-input')
 
-let screen=document.querySelectorAll('.screen');
+let screen = document.querySelectorAll('.screen');
+const calculate = handlerBtn[0];
+const reset = handlerBtn[1];
 
 Array.from(totalInput).forEach((el) => {
     console.log(el);
 });
 
 console.log(h1[0]);
-console.log(handlerBtn[0]);
-console.log(handlerBtn[1]);
+console.log(calculate);
+console.log(reset);
 console.log(screenBtn);
 console.log(otherItems1);
 console.log(otherItems2);
