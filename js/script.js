@@ -77,14 +77,14 @@ const appData = {
       });
     });
   },
-  addServices: () => {
+  addServices: function () {
     otherItemsPercent.forEach((item) => {
       const check = item.querySelector('input[type="checkbox"]');
       const label = item.querySelector("label");
       const input = item.querySelector('input[type="text"]');
 
       if (check.checked) {
-        appData.servicesPercent[label.textContent] = +input.value;
+        this.servicesPercent[label.textContent] = +input.value;
       }
     });
     otherItemsNumber.forEach((item) => {
@@ -93,7 +93,7 @@ const appData = {
       const input = item.querySelector('input[type="text"]');
 
       if (check.checked) {
-        appData.servicesNumber[label.textContent] = +input.value;
+        this.servicesNumber[label.textContent] = +input.value;
       }
     });
   },
@@ -147,7 +147,7 @@ const appData = {
     resetBtn.style.display = "flex";
     screens = document.querySelectorAll(".screen");
     buttonPlus.disabled = true;
-    screens.forEach.call(screens, function (screen) {
+    screens.forEach((screen) => {
       const select = screen.querySelector("select");
       const input = screen.querySelector("input");
       for (let i = 0; i < screens.length; i++) {
@@ -195,14 +195,16 @@ const appData = {
       input.disabled = false;
       if (check.checked) {
         check.checked = false;
-        this.servicesPercent[label.textContent] = 0;
+        this.servicesNumber[label.textContent] = 0;
       }
     });
     otherItemsPercent.forEach((item) => {
       const check = item.querySelector('input[type="checkbox"]');
       const label = item.querySelector("label");
+      const input = item.querySelector('input[type="text"]');
       check.disabled = false;
       label.draggable = false;
+      input.disabled = false;
       if (check.checked) {
         check.checked = false;
         this.servicesPercent[label.textContent] = 0;
